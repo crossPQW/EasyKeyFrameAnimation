@@ -11,13 +11,21 @@
 
 @interface EAKeyFrame : NSObject
 
+
 @property (nonatomic, assign) CGRect frame;
+@property (nonatomic, assign) CGRect bounds;
 @property (nonatomic, strong, nullable) NSNumber *alpha;
+@property (nonatomic, strong, nullable) NSNumber *opacity;
+@property (nonatomic, strong, nullable) UIColor *backgroundColor;
+@property (nonatomic, strong, nullable) UIColor *borderColor;
+@property (nonatomic, strong, nullable) NSNumber *borderWidth;
+@property (nonatomic, strong, nullable) NSNumber *cornerRadius;
+
+
 //从上一帧到当前帧持续时间
 @property (nonatomic, assign, nonnull) NSNumber *duration;
 
-//以下两个属性取值范围在0~1之间，为每一帧占据总动画时间的比例，无需赋值，只需设置好 duration，manager 会自动计算比例。
+
 @property (nonatomic, assign, readonly) double startTime;
 @property (nonatomic, assign, readonly) double relativeDuration;
-
 @end

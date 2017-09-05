@@ -23,8 +23,8 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     EAKeyFrame *keyFrame = [[EAKeyFrame alloc] init];
-    keyFrame.duration = @5;
-//    keyFrame.alpha = 1;
+    keyFrame.duration = @0;
+    keyFrame.alpha = @1;
     keyFrame.frame = self.redView.frame;
     
     EAKeyFrame *keyFrame1 = [[EAKeyFrame alloc] init];

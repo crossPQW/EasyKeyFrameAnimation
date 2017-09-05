@@ -42,8 +42,32 @@
                     self.frame = keyFrame.frame;
                 }
                 
+                if (!CGRectIsEmpty(keyFrame.bounds)) {
+                    self.bounds = keyFrame.bounds;
+                }
+                
                 if (keyFrame.alpha) {
                     self.alpha = keyFrame.alpha.doubleValue;
+                }
+                
+                if (keyFrame.opacity) {
+                    self.layer.opacity = keyFrame.opacity.doubleValue;
+                }
+                
+                if (keyFrame.backgroundColor) {
+                    self.backgroundColor = keyFrame.backgroundColor;
+                }
+                
+                if (keyFrame.borderColor) {
+                    self.layer.borderColor = keyFrame.borderColor.CGColor;
+                }
+                
+                if (keyFrame.borderWidth) {
+                    self.layer.borderWidth = keyFrame.borderWidth.doubleValue;
+                }
+                
+                if (keyFrame.cornerRadius) {
+                    self.layer.cornerRadius = keyFrame.cornerRadius.doubleValue;
                 }
                 
             }];
