@@ -27,8 +27,6 @@
     keyFrame.alpha = @1;
     keyFrame.frame = self.redView.frame;
     keyFrame.backgroundColor = [UIColor blueColor];
-    keyFrame.borderColor = [UIColor redColor];
-    keyFrame.borderWidth = @10;
     keyFrame.cornerRadius = @5;
     
     EAKeyFrame *keyFrame1 = [[EAKeyFrame alloc] init];
@@ -36,11 +34,16 @@
     keyFrame1.alpha = @1;
     keyFrame1.frame = CGRectMake(100, 200, 100, 50);
     keyFrame1.backgroundColor = [UIColor greenColor];
-    keyFrame1.borderColor = [UIColor blackColor];
-    keyFrame1.borderWidth = @1;
     keyFrame1.cornerRadius = @10;
     
-    [self.redView addAnimationsWithKeyFrames:@[keyFrame,keyFrame1] complete:^{
+    EAKeyFrame *keyFrame2 = [[EAKeyFrame alloc] init];
+    keyFrame2.duration = @3;
+    keyFrame2.alpha = @0.5;
+    keyFrame2.frame = CGRectMake(200, 200, 100, 100);
+    keyFrame2.backgroundColor = [UIColor grayColor];
+    keyFrame2.cornerRadius = @50;
+    
+    [self.redView addAnimationsWithKeyFrames:@[keyFrame,keyFrame1,keyFrame2] complete:^{
         NSLog(@"Animate has completed");
     }];
     

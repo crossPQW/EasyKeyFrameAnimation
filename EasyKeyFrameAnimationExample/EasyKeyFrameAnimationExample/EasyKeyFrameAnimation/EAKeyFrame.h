@@ -17,8 +17,6 @@
 @property (nonatomic, strong, nullable) NSNumber *alpha;
 @property (nonatomic, strong, nullable) NSNumber *opacity;
 @property (nonatomic, strong, nullable) UIColor *backgroundColor;
-@property (nonatomic, strong, nullable) UIColor *borderColor;
-@property (nonatomic, strong, nullable) NSNumber *borderWidth;
 @property (nonatomic, strong, nullable) NSNumber *cornerRadius;
 
 
